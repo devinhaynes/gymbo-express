@@ -19,20 +19,20 @@ const HOST = 'localhost';
 const app = express();
 
 //MongoDB
-mongoose.connect(config.database, { useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect(config.database, config.options);
 
 //Middleware for parsing JSON
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 //use sessions for tracking logins
 app.use(session({
   secret: 'work hard',
   resave: true,
   saveUninitialized: false,
-  cookie: {maxAge: 60000}
+  cookie: { maxAge: 60000 }
 }));
 //Allows pug templates to get session variables
-app.use((req,res,next) => {
+app.use((req, res, next) => {
   res.locals.session = req.session;
   next();
 });
@@ -40,22 +40,22 @@ app.use((req,res,next) => {
 app.use(validator({
   errorFormatter: (param, msg, value) => {
     var namespace = param.split('.'),
-    root = namespace.shift(),
-    formParam = root;
+      root = namespace.shift(),
+      formParam = root;
 
     while (namespace.length) {
       formParam += '[' + namespace.shift() + ']';
     }
     return {
-      param : formParam,
-      msg : msg,
-      value : value
+      param: formParam,
+      msg: msg,
+      value: value
     };
   }
 }));
 //Flash messages
 app.use(flash());
-app.use( (req, res, next) => {
+app.use((req, res, next) => {
   res.locals.messages = require('express-messages')(req, res);
   next();
 })
@@ -74,5 +74,6 @@ app.use(express.static(path.join(__dirname, 'static')));
 let route = require('./routes/router');
 app.use('/', route);
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Running on http://${HOST}:${PORT}`);
+});
