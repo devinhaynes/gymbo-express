@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    .container(style="margin-top: 50px")
+        h1 Control Panel
+    .container(style="margin-top: 50px")
+            .form-group
+                form(method="POST" action="/register" name="register")
+                    .input-group.mb-3
+                            .input-prepend
+                                span.input-group-text Email
+                            input.form-control(type="text" name="email" required)
+                            br
+                    .input-group.mb-3
+                        .input-prepend
+                            span.input-group-text Username
+                        input.form-control(type="text" name="username" required)
+                        br
+                    .input-group.mb-3
+                        .input-prepend
+                            span.input-group-text Password
+                        input.form-control(type="password" name="password" required)
+                        br
+                    .input-group.mb-3
+                        .input-prepend
+                            span.input-group-text Confirm Password
+                        input.form-control(type="password" name="confirmPassword" required)
+                        br
+                    button.btn.btn-primary(type="submit") Register

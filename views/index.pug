@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    div.container(style="margin-top: 50px")
+        h1 Please login
+    div.container(style="margin-top: 50px")       
+        div.form-group
+            form(method="POST", action="/login", name="login") 
+                div.input-group.mb-3
+                    div.input-prepend
+                        span.input-group-text Username
+                    input.form-control(type="text", name="username", required) 
+                div.input-group.mb-3
+                    div.input-prepend
+                        span.input-group-text Password
+                    input.form-control(type="password", name="password", required)
+                button.btn.btn-primary(type="submit") Login
+            p
+                a(href="/register") Dont have an account yet?          

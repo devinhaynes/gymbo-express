@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    .container(style="margin-top: 50px")
+        h1 Password Reset Portal
+    .container(style="margin-top: 50px")
+            .form-group
+                form(method="POST" action="/reset" name="reset")
+                    .input-group.mb-3
+                            .input-prepend
+                                span.input-group-text Current Password
+                            input.form-control(type="password" name="current" required)
+                            br
+                    .input-group.mb-3
+                        .input-prepend
+                            span.input-group-text New Password
+                        input.form-control(type="password" name="newPassword" required)
+                        br
+                    .input-group.mb-3
+                        .input-prepend
+                            span.input-group-text Confirm Password
+                        input.form-control(type="password" name="newConfirm" required)
+                        br
+                    button.btn.btn-primary(type="submit") Reset Password

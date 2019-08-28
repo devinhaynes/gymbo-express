@@ -1,0 +1,31 @@
+.alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-success-msg {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #ebccd1;
+}
+
+.profile-object {
+    min-height: 400px;
+    margin: 10px;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-chart {
+    min-height: 400px;
+    width: 100%;
+}
+
+.line {
+    fill: none;
+   stroke: green;
+   stroke-width: 2px;
+}

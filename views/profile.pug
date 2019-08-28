@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .container(style="margin-top: 50px")
+        h1 Welcome #{user}   
+        .container
+            .row
+                .col.border-left.border-secondary
+                    .profile-object
+                        .container-fluid
+                            h3.profile-header Usage statistics
+                            hr
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non lectus eget diam venenatis vestibulum. Cras sagittis tempor mi in dignissim. In sagittis dictum libero non posuere. Cras faucibus facilisis condimentum. Integer ut ullamcorper libero, vitae cursus nunc. Donec velit massa, pharetra non convallis vel, vestibulum in purus. In enim nisi, vulputate vel tincidunt et, tempor eget dolor. Vestibulum fermentum sodales ex, eget sollicitudin neque feugiat eget. Maecenas vitae molestie lacus. Nulla non nisl nunc. Nam gravida odio vel posuere volutpat. Mauris egestas metus in interdum ultricies. Cras rhoncus aliquam sapien, nec faucibus dolor ultrices sit amet. Donec nec ultricies neque. Suspendisse dapibus lobortis commodo. Maecenas nisi nibh, pellentesque et mi id, sollicitudin interdum odio. Fusce nulla tortor, vehicula et ornare et, luctus eu elit. Nulla sagittis metus ipsum. Integer nisi massa, faucibus vitae sem quis, porttitor tincidunt nulla. In vel lectus sagittis diam viverra varius. Maecenas eget tempus orci. Donec eu ultrices mi. Quisque malesuada posuere felis vitae suscipit. Sed auctor aliquam eleifend. Donec ultrices, eros sed laoreet laoreet, lorem augue mattis nulla, quis varius magna lectus iaculis leo. Ut a elit tempor magna gravida dignissim. Nam vitae aliquam diam. Suspendisse ex massa, tincidunt in dui eu, feugiat interdum purus. Vivamus urna velit, consequat in auctor eget, ultricies quis ipsum. Nunc eleifend mattis fringilla. Fusce nibh nibh, efficitur sed elit ut, iaculis cursus sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus, elit at tempor tincidunt, nibh ex dapibus eros, tincidunt viverra lectus turpis ut dolor. Nullam ipsum tellus, porta et luctus a, convallis a massa. In turpis sapien, hendrerit in metus non, rutrum rutrum neque. Vivamus eget consectetur velit. Suspendisse dapibus nunc eu eros rutrum, in consequat nibh efficitur. Donec tincidunt pulvinar enim ac cursus. 
+                .col.border-right.border-secondary
+                    .profile-object
+                        .container-fluid
+                            h3.profile-header CPU usage
+                            hr
+                            .svgContainer
+    
+block script
+    script(src='svg.js')

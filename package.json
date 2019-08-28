@@ -1,0 +1,35 @@
+{
+  "name": "gymbo-express",
+  "version": "1.0.0",
+  "description": "nodeapi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start-dev": "nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "Devin Haynes",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.16.2",
+    "express-validator": "^5.3.1",
+    "mongoose": "^5.6.11",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
