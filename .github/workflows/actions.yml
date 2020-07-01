@@ -1,0 +1,17 @@
+name: Deploy Code
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run some commands
+        run: |
+          ls -a
+          pwd
+          echo "Hello World"
+          docker version
