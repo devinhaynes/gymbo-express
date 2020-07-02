@@ -12,7 +12,5 @@ jobs:
     steps:
       - name: Run some commands
         run: |
-          ls -a
-          pwd
-          echo "Hello World"
-          docker version
+          npm start
+          docker container ls
